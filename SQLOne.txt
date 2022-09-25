@@ -1,0 +1,111 @@
+CREATE TABLE Author
+(Author_id CHAR(2) PRIMARY KEY NOT NULL,
+Lastname VARCHAR(15) NOT NULL,
+Firstname VARCHAR(15) NOT NULL,
+Email VARCHAR(40)
+);
+
+SELECT *
+FROM Author;
+
+ALTER TABLE Author
+ADD COLUMN Telephone_number BIGINT;
+
+SELECT Firstname
+FROM Author
+WHERE Firstname LIKE 'R%';
+
+SELECT Title, Pages
+FROM Book
+WHERE Pages Between 290 AND 300;
+
+SELECT Firstname, Lastname, Country
+FROM Author
+WHERE Country IN ('AU', 'BR');
+
+SELECT Title
+FROM Book
+ORDER BY Title;
+
+SELECT Title, Pages
+FROM Book
+ORDER BY 2;
+
+SELECT DISTINCT(Country)
+FROM Author
+GROUP BY Country;
+
+SELECT Country, COUNT(Country) AS COUNT
+FROM Author
+GROUP BY Country;
+
+SELECT Country, COUNT(Country) AS Country
+FROM Author
+GROUP BY Country
+HAVING COUNT(Country) >4;
+
+------
+SELECT ROUND(Cost)
+FROM Petrescue;
+
+SELECT LENGTH(Animal)
+FROM Petrescue;
+
+SELECT DISTINCT(UCASE(Animal))
+FROM Petrescue;
+
+SELECT *
+FROM Petrescue
+WHERE LCASE(Animal)= 'Cat";
+
+------
+SELECT *
+FROM Employees;
+
+SELECT EMP_ID, Salary,
+ (SELECT AVG(Salary)
+  FROM Employees) 
+  AS AVG_Salary
+FROM Employees;
+
+SELECT *
+FROM Employees
+WHERE Salary IS <
+				 (SELECT AVG(Salary)
+				  FROM Employees)
+;
+
+SELECT EMP_ID, Salary,
+					  (SELECT MAX(Salary)
+					   FROM Employees) AS MAX_SALARY
+FROM Employees;
+
+SELECT *
+FROM Employees
+WHERE DEP_ID IN	
+				(SELECT DEPT_ID_DEP
+				 FROM Departments)
+;
+------
+SELECT *
+FROM Films;
+
+SELECT Release_year
+FROM Films
+WHERE Release_year > 1994 AND Release_year < 2000;
+
+SELECT Release_year, Certificate
+FROM Films
+WHERE (Release_year = 1994 OR Release_year =1995)
+AND (Certificate = 'PG' OR Certificate = 'R')
+;
+
+SELECT Release_year
+FROM Films
+GROUP BY Release_year
+HAVING Count(Title) > 10;
+
+
+				 
+
+
