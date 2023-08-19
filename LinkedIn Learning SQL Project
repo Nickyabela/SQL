@@ -1,0 +1,20 @@
+/*In this project, I worked my way through using phpMyAdmin dataset provided - demo page available via google.*/
+
+/*Challenge Objectives:
+You work at a movie rental store. A customer asks for your help to loacte a movie. Be sure the movie meets the following conditions:
+Rating of G or PG
+A drama
+Use only the film table*/
+
+SELECT Title FROM film 
+WHERE description LIKE '%Drama%' 
+AND rating IN( 'PG', 'G') 
+ORDER BY Title;
+
+/*Senior management needs a report of all film titles.
+Build a report showing all film titles from the film table
+Convert the film titles to proper case from upper case.*/
+
+SELECT CONCAT(UPPER(LEFT(title, 1)), LOWER(SUBSTRING(title, 2))) AS Title 
+FROM film
+ORDER BY Title;
