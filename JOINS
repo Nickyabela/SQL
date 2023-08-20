@@ -1,0 +1,21 @@
+/*In this SQL code, I display two or more tables joinng/merging together to preform a queries.*/
+
+INNER JOIN Tables: Customers and Address
+Query all customers and their addresses where thie district falls in Buenos Aires.
+SELECT c.first_name, c.last_name, a.address
+FROM customer AS c
+JOIN address AS a
+ON c.address_id = a.address_id
+WHERE district = 'Buenos Aires';
+
+INNER JOIN Tables: Pime Ministers and Presidents
+SELECT p1.country, p1.continent, prime minister, president
+FROM prime_ministers as p1
+JOIN presidents AS p2
+ON p1.country = p2.country
+
+/*Merge data across tables using IN*/
+SELECT * FROM rental WHERE customer_id IN ( 
+SELECT customer_id 
+FROM customer 
+WHERE first_name = 'MARY');
