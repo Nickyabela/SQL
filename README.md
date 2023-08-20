@@ -1,3 +1,5 @@
 # SQL
-SQL Portfolio
-[SQLOne.txt](https://github.com/Nickyabela/SQL/files/9641429/SQLOne.txt)
+ SQL Portfolio
+ # SQL Alyssa Robinson's SQL Portfolio
+
+ ## Welcome to my SQL Portfolio! This code repository contains examples of SQL I have written. Take a look and reach out to me via email if you have any questions: Nickyaabela@gmail.com
