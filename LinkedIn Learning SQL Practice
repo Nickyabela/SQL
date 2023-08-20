@@ -1,4 +1,4 @@
-/*In this SQL, I'm preforming LinkedIn Learning Practice Questions using the Address and Film table*/
+/*In this SQL, I'm preforming LinkedIn Learning Practice Questions using the Address and Film table provided to me*/
 
 /*Filter grouped results with HAVING*/
 /*Query the districts that contain a 'B' and contain more than 8 rows in the address table.*/
