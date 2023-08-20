@@ -1,7 +1,7 @@
 /*In this SQL, I'm preforming LinkedIn Learning Practice Questions using the Address and Film table*/
 
 /*Filter grouped results with HAVING*/
-/*Query the districts that contain a 'B' and contain more than 8 rows in the address table*/
+/*Query the districts that contain a 'B' and contain more than 8 rows in the address table.*/
 SELECT district, COUNT(*) AS ct
 FROM address
 WHERE district LIKE '%B%'
@@ -9,11 +9,25 @@ GROUP BY district
 HAVING ct>8
 ORDER BY ct DESC;
 
-/*Use the address table to create a GROUP BY with COUNT query*/
 /*Query the most common disticts to live?*/
 SELECT district, COUNT(*) AS ct
 FROM address
 GROUP BY district
 ORDER BY ct DESC;
 
+/*Query films with a release year after 1994 but no later than 2000.*/
+SELECT Release_year
+FROM Films
+WHERE Release_year > 1994 AND Release_year < 2000;
 
+/*Query films release in 1994 or 1995 with certificates PG or R.*/
+SELECT Release_year, Certificate
+FROM Films
+WHERE (Release_year = 1994 OR Release_year =1995)
+AND (Certificate = 'PG' OR Certificate = 'R');
+
+/*Query which years release more than 10 films.*/
+SELECT Release_year
+FROM Films
+GROUP BY Release_year
+HAVING Count(Title) > 10;
