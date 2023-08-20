@@ -1,0 +1,30 @@
+/*In this SQL, I'm preforming LinkedIn Learning Practice Questions using the Address and Film table*/
+
+/*Filter grouped results with HAVING*/
+/*Query the districts that contain a 'B' and contain more than 8 rows in the address table*/
+SELECT district, COUNT(*) AS ct
+FROM address
+WHERE district LIKE '%B%'
+GROUP BY district
+HAVING ct>8
+ORDER BY ct DESC;
+
+/*Use the address table to create a GROUP BY with COUNT query*/
+/*Query the most common disticts to live?*/
+SELECT district, COUNT(*) AS ct
+FROM address
+GROUP BY district
+ORDER BY ct DESC;
+
+/*CHALLENGE: COST ANALYSIS
+You are an analyst at the movie store. You are advising the finance and strategy deparments.
+#1 Analyze movie replacement costs less than 20 by rating
+#2 Only analyze films less than 90 minutes
+#3 Use only the film table*/
+
+SELECT length, rating, replacement_cost, COUNT (*)
+FROM film 
+WHERE length < 90
+GROUP BY rating 
+HAVING AVG(replacement_cost) <20;
+
