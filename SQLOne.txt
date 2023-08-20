@@ -1,3 +1,5 @@
+In this SQL code, I've created an example database and an answering miscellaneous queries.
+
 CREATE TABLE Author
 (Author_id CHAR(2) PRIMARY KEY NOT NULL,
 Lastname VARCHAR(15) NOT NULL,
@@ -45,20 +47,6 @@ GROUP BY Country
 HAVING COUNT(Country) >4;
 
 ------
-SELECT ROUND(Cost)
-FROM Petrescue;
-
-SELECT LENGTH(Animal)
-FROM Petrescue;
-
-SELECT DISTINCT(UCASE(Animal))
-FROM Petrescue;
-
-SELECT *
-FROM Petrescue
-WHERE LCASE(Animal)= 'Cat";
-
-------
 SELECT *
 FROM Employees;
 
@@ -86,24 +74,7 @@ WHERE DEP_ID IN
 				(SELECT DEPT_ID_DEP
 				 FROM Departments)
 ;
-------
-SELECT *
-FROM Films;
 
-SELECT Release_year
-FROM Films
-WHERE Release_year > 1994 AND Release_year < 2000;
-
-SELECT Release_year, Certificate
-FROM Films
-WHERE (Release_year = 1994 OR Release_year =1995)
-AND (Certificate = 'PG' OR Certificate = 'R')
-;
-
-SELECT Release_year
-FROM Films
-GROUP BY Release_year
-HAVING Count(Title) > 10;
 
 
 				 
