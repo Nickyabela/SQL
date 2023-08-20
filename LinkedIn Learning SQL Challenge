@@ -30,3 +30,16 @@ FROM film
 WHERE length<90 
 GROUP BY rating 
 HAVING AVG(replacement_cost) <20;
+
+/*CHALLENGE: JOIN TABLES
+OBJECTIVES:
+#1 Return all data from the film, film_category, and category tables
+#2 Filter for comedies
+
+SELECT description, c.name 
+FROM film AS f 
+INNER JOIN film_category AS fc 
+ON f.film_id = fc.film_id 
+INNER JOIN category As c 
+ON c.category_id= fc.category_id 
+WHERE c.name = 'comedy';
