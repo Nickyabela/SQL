@@ -18,3 +18,15 @@ Convert the film titles to proper case from upper case.*/
 SELECT CONCAT(UPPER(LEFT(title, 1)), LOWER(SUBSTRING(title, 2))) AS Title 
 FROM film
 ORDER BY Title;
+
+/*CHALLENGE: COST ANALYSIS
+You are an analyst at the movie store. You are advising the finance and strategy deparments.
+#1 Analyze movie replacement costs less than 20 by rating
+#2 Only analyze films less than 90 minutes
+#3 Use only the film table*/
+
+SELECT length, rating, replacement_cost, COUNT(*) 
+FROM film 
+WHERE length<90 
+GROUP BY rating 
+HAVING AVG(replacement_cost) <20;
