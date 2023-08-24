@@ -1,5 +1,5 @@
-/* In this SQL, I'm querying a database with multiple tables in MySQLite Studio using databases files that were provided to me 
-to follow along in the training module "SQL Essential Trainging" presented by Bill Weinman.
+/* In this SQL, using MySQLite Studio. I'm querying multiple database files that were provided to me 
+to follow along in the training module "SQL Essential Trainging" presented by Bill Weinman via LinkedIn Learning.
 
 #1 Select Name and LifeExpectancy from the Country table. Order the Names in ascending order and provide an alias for "LifeExpectancy".
 SELECT Name, LifeExpectancy AS "Life Expectancy"
