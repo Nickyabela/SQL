@@ -1,0 +1,15 @@
+/* In this SQL, I'm querying a database with multiple tables in MySQLite Studio using databases files that were provided to me 
+to follow along in the training module "SQL Essential Trainging" presented by Bill Weinman.
+
+#1 Select Name and LifeExpectancy from the Country table. Order the Names in ascending order and provide an alias for "LifeExpectancy".
+SELECT Name, LifeExpectancy AS "Life Expectancy"
+FROM Country
+ORDER BY Name;
+
+#2 Display the first 5 names in the Country table who reside in Europe.
+SELECT Name, Continent, Region
+FROM Country
+WHERE Continent ='Europe'
+ORDER BY Name
+LIMIT 5;
+
