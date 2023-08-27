@@ -27,3 +27,14 @@ VALUES ('Fred Flinstone', '123 Cobblestone Way', ' Bedroxk', 'CA', '91234');
 
 UPDATE customer SET address = '123 Musica Avenue, city = 'Renton', state = 'WA', zip = '98056' WHERE customer ID = 5;
 
+DROP TABLE IF EXISTS customer;
+
+SELECT Name, Continent, Population FROM Country
+WHERE Population <100000 ORDER BY Population DESC;
+
+SELECT Name, Continent, Population FROM Country
+WHERE Population <100000 AND Continent = 'Oceania' ORDER BY Population DESC;
+
+SELECT Name, Continent, Population FROM Country
+WHERE Name LIKE '%island%' ORDER BY Name;
+
