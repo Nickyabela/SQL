@@ -29,6 +29,8 @@ UPDATE customer SET address = '123 Musica Avenue, city = 'Renton', state = 'WA',
 
 DROP TABLE IF EXISTS customer;
 
+/* I'm using the World database to query the statements below.*/
+
 SELECT Name, Continent, Population FROM Country
 WHERE Population <100000 ORDER BY Population DESC;
 
@@ -37,4 +39,8 @@ WHERE Population <100000 AND Continent = 'Oceania' ORDER BY Population DESC;
 
 SELECT Name, Continent, Population FROM Country
 WHERE Name LIKE '%island%' ORDER BY Name;
+
+SELECT Name, Continent, Population FROM Country
+WHERE Continent IN ('Europe', 'Asia') ORDER BY Name;
+
 
